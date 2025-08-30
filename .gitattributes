@@ -1,0 +1,7 @@
+*.b3dm filter=lfs diff=lfs merge=lfs -text
+*.pnts filter=lfs diff=lfs merge=lfs -text
+*.i3dm filter=lfs diff=lfs merge=lfs -text
+*.cmpt filter=lfs diff=lfs merge=lfs -text
+*.json filter=lfs diff=lfs merge=lfs -text
+*.glb filter=lfs diff=lfs merge=lfs -text
+*.gltf filter=lfs diff=lfs merge=lfs -text
