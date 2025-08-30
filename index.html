@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>School 3D Model</title>
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.132/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.132/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <style>
+        html, body, #cesiumContainer {
+            width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="cesiumContainer"></div>
+    <script>
+        const viewer = new Cesium.Viewer('cesiumContainer');
+        
+        // 加载你的3D模型
+        const tileset = viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
+            url: './Apps/SampleData/terra_b3dms/tileset.json'
+        }));
+        
+        tileset.readyPromise.then(function(tileset) {
+            viewer.zoomTo(tileset);
+        });
+    </script>
+</body>
+</html>
